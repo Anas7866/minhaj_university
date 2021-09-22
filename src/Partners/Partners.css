@@ -1,0 +1,58 @@
+#main:hover{
+    
+    /* border: 1px solid #3B5998; */
+	/* transition: 0.4s;
+    text-shadow: 2px 2px 4px #000000; */
+    -moz-box-shadow: 0 0 10px rgb(136, 133, 133);
+    -webkit-box-shadow: 0 0 10px rgb(136, 133, 133);
+    box-shadow: 0 0 10px rgb(136, 133, 133);
+    transition: 0.4s;
+    
+    
+    
+}
+
+#main{
+    border-radius: 5px;
+    border: 1px solid #3B5998;
+}
+
+
+#facebook-link{
+    border: none;
+    overflow: hidden;
+    width: 100vh;
+    height: 100vh;
+
+}
+
+
+.bg-our-partners{
+    background-image: url(../Asset/Images/partners.png);
+    background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: bottom; 
+      height: 40vh;
+      
+      
+}
+
+
+@media screen and (max-width: 790px)
+{
+    .bg-our-partners{
+        background-image: url(../Asset/Images/partners.png);
+        background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: bottom; 
+          height: auto;
+          padding-bottom: 4%;
+          
+    }
+    #facebook-link{
+        display: none;
+    }
+
+  
+    
+}

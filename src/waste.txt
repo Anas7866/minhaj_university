@@ -1,0 +1,51 @@
+<script>
+    (function ($) {
+      $(document).ready(function () {
+        $("#header").scrollToFixed();
+
+
+
+        $('#nav').scrollToFixed({
+          marginTop: $('#header').outerHeight() + 10,
+          limit: function () {
+            var limit = $('#footer').offset().top - $('#nav').outerHeight(true) - 10;
+            return limit;
+          },
+          zIndex: 999,
+          preFixed: function () { $(this).find('.title').css('color', 'blue'); },
+          preAbsolute: function () { $(this).find('.title').css('color', 'red'); },
+          postFixed: function () { $(this).find('.title').css('color', ''); },
+          postAbsolute: function () { $(this).find('.title').css('color', ''); }
+        });
+
+        /*$("#nav").scrollToFixed({
+            marginTop: $('#header').outerHeight() + 10,
+          limit:  function() {
+              var limit = $('#footer').offset().top - $('#nav').outerHeight(true) - 10;
+              return limit;
+          },
+            zIndex: 999,
+            preFixed: function() { $(this).find('.title').css('color', 'blue'); },
+            preAbsolute: function() { $(this).find('.title').css('color', 'red'); },
+            postFixed: function() { $(this).find('.title').css('color', ''); },
+            postAbsolute: function() { $(this).find('.title').css('color', ''); }
+        });*/
+      });
+    }(jQuery));
+  </script>
+
+
+  <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>
